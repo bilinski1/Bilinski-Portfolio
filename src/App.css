@@ -1,9 +1,31 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .background {
   background: #828282;
 }
 .portfoliogrid {
   background: #828282;
+}
+.main {
+  min-height: '1000px';
+  position: 'relative';
+  background-color: '#828282';
+}
+.mainsubtext {
+  color: #666666;
+}
+.shadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 10px 10px 8px #000000;
+}
+.centeralingment {
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
 }

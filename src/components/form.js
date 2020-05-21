@@ -1,12 +1,31 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Grid, Box, TextField } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
-class Form extends Component {
-  render (){
-    return (
-    <div><h1>Kontakt</h1>
-    </div>
-  );
-}
-}
 
-export default Form;
+
+class Contact extends Component {
+    render (){
+        return (
+            <Grid container fluid direction="column" justify="flex-center" alignItems="center" spacing={3} alignContent="center">
+              <form style={{ textAlign: 'center'}} noValidate autoComplete="off" alignItems="center" spacing={3} alignContent="center">
+              <Box m={2}>
+              <TextField id="filled-secondary" label="Imię" variant="filled" />
+              </Box>
+              <Box m={2}>
+              <TextField id="filled-basic" label="Nazwisko" variant="filled" />
+              </Box>
+              <Box m={2}>
+              <TextField id="tel" label="Tel." InputAdornment="+48" variant="filled" />
+              </Box>
+              <Box m={2}>
+              <TextField id="text" label="Treść" variant="filled" multiline rows={6}/>
+              </Box>
+              <Button variant="outlined" color="primary">Send</Button>
+              </form>
+            </Grid>
+        );
+    }
+}
+export default Contact;

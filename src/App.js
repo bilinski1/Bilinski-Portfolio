@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { Layout, Header, Navigation, Content, Drawer } from 'react-mdl';
-import './App.css';
+import styles from './App.css';
 import Routes from './components/routes';
 import { Link } from 'react-router-dom';
-
+import Footerino from './components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {
     return (
-      <div style={{height: '500px', position: 'relative', backgroundColor: '#828282'}}>
+      <div className={styles.main}>
           <Layout style={{backgroundColor: '#828282'}}>
               <Header transparent title="B-Design" style={{color: 'white'}}>
                   <Navigation>
@@ -29,6 +30,7 @@ class App extends Component {
               <Content>
                 <Routes/>
               </Content>
+              <Footerino/>
           </Layout>
       </div>
   );
