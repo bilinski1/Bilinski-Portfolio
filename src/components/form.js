@@ -23,6 +23,8 @@ class Contact extends Component {
               </Box>
               <Button variant="outlined" color="primary">Send</Button>
               </form>
+              <p>email: office@bdesign.dev
+              Adres: Kraków ul. Zamoyskiego 77/2</p>
             </Grid>
         );
     }
