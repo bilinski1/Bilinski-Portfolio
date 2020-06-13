@@ -40,25 +40,25 @@ class Project extends Component {
           <Col fluid> 
             <Image style={shadowandwidth} src={Cpbiuro} fluid/>
             <Paper elevation={10} style={paper}>
-              <p className="text-center maintext">www.biurocp.pL Strona pisana od podstaw Projekt Logo Grafika Dedykowana</p>
+              <p className="text-center maintext">www.biurocp.pL<br></br>HTML/CSS<br></br>Projekt Logo, <br></br>Grafika Dedykowana. <br></br>Responsywna</p>
             </Paper>
             <Image style={shadowandwidth} src={Englishlector4u} fluid/>
             <Paper elevation={10} style={paper}>
-              <p> www.englishlector4u.pl System CMS WordpressPanel Klienta Panel Admina Projekt Logo Grafika Dedykowana</p>
+              <p> www.englishlector4u.pl <br></br>System CMS WordpressPanel Klienta Panel Admina Projekt Logo Grafika Dedykowana<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
             </Paper>
             <Image style={shadowandwidth} src={Fastmask} fluid/>
             <Paper elevation={10} style={paper}>
-              <p> www.fastmask.pl Sklep internetowy, System CMS Wordpress</p>
+              <p> www.fastmask.pl <br></br>Sklep internetowy, System CMS Wordpress<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
             </Paper>
           </Col>
           <Col>  
             <Image style={shadowandwidth} src={Ozdobychoinkowe} fluid/>
             <Paper elevation={10} style={paper}>
-            <p className="text-center">www.bilinski.online - CMS Wordpress-Woocommerce, Responsive</p>
+            <p className="text-center">www.ozdobychoinkowe.pl<br></br>System CMS: Wordpress<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
             </Paper>
             <Image style={shadowandwidth} src={Marsell} fluid/>
             <Paper elevation={10} style={paper}>
-            <p className="text-center">www.marsellbrzesko.pl - Coded from sctratch Projekt, Dedicated Graphic</p>
+            <p className="text-center">www.marsellbrzesko.pl <br></br>HTML/CSS<br></br>Grafika Dedykowana<br></br>jQuery<br></br>Responsywna</p>
             </Paper>
           </Col>
         </Row>
