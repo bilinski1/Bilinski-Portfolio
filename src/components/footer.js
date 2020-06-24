@@ -17,7 +17,7 @@ class Footerino extends Component {
         </Box>
         <Box>
             <Link to={{tel:669560101}} data-rel="external" className={style}>Tel: +48 669 560 101</Link><br />
-            <Link to="mailto:biuro@bilinskidesign.pl" data-rel="external">Email: biuro@bilinskidesign.pl </Link>
+            <Link to="mailto:biuro@bilinskidesign.pl" data-rel="external">Email: office@bilinskidesign.pl </Link>
             <p>Copyright Bilinski Design</p>
         </Box>
     </Grid>
