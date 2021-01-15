@@ -24,6 +24,7 @@ class App extends Component {
                   <Navigation>
                       <Link to="/">O nas</Link>
                       <Link to="/projects">Projekty</Link>
+                      <Link to="/projects">Współpraca</Link>
                       <Link to="/form">Kontakt</Link>
                   </Navigation>
               </Drawer>

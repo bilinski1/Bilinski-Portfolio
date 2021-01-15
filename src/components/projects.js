@@ -11,9 +11,16 @@ import Fastmask from '../images/fastmask.png';
 import Nowan from '../images/nowan.png';
 import Muzeumbombki from '../images/muzeumbombki.png';
 import { Paper } from '@material-ui/core';
+import { Fade } from '@material-ui/core';
+import VizSensor from 'react-visibility-sensor';
+
+
 
 
 class Project extends Component {
+  state = {
+    imgViz: false
+  }
   render (){
     var shadowandwidth = {
       boxShadow: "9px 11px 13px -3px black",
@@ -40,10 +47,14 @@ class Project extends Component {
       <Container fluid style={center}>
         <Row>
           <Col fluid> 
+          <Fade in={true} timeout={1000 }>
             <Image style={shadowandwidth} src={Englishlector4u} fluid/>
-            <Paper elevation={10} style={paper}>
-              <p> www.englishlector4u.pl <br></br>System CMS Wordpress, Panel Klienta, Panel Admina, Projekt Logo, Grafika Dedykowana<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
-            </Paper>
+            </Fade>
+            <Fade in={true} timeout={10000 }>
+      <Paper  elevation={10} style={paper}>
+        <p> www.englishlector4u.pl <br></br>System CMS Wordpress, Panel Klienta, Panel Admina, Projekt Logo, Grafika Dedykowana<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
+      </Paper>
+      </Fade>
             <Image style={shadowandwidth} src={Nowan} fluid/>
             <Paper elevation={10} style={paper}>
               <p className="text-center maintext">www.nowanbhp.pl<br></br>Sklep internetowy, System CMS Wordpress<br></br>Sklep: Woocommerce<br></br>Responsywna<br></br>Projekt Logo,<br></br>Grafika Dedykowana. <br></br>Responsywna</p>
@@ -52,10 +63,11 @@ class Project extends Component {
             <Paper elevation={10} style={paper}>
               <p className="text-center maintext">www.muzeumbombki.pl<br></br>HTML/CSS/JavaScript<br></br>Projekt Logo<br></br>Grafika Dedykowana<br></br>Responsywna</p>
             </Paper>
- 
           </Col>
           <Col>  
+          <Fade in={true} timeout={2000 }>
             <Image style={shadowandwidth} src={Ozdobychoinkowe} fluid/>
+            </Fade>
             <Paper elevation={10} style={paper}>
             <p className="text-center">www.ozdobychoinkowe.pl<br></br>System CMS: Wordpress<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
             </Paper>
@@ -72,7 +84,22 @@ class Project extends Component {
               <p> www.fastmask.pl <br></br>Sklep internetowy, System CMS Wordpress<br></br>Sklep: Woocommerce<br></br>Responsywna</p>
             </Paper>
           </Col>
+          <VizSensor
+      onChange={(isVisible) => {
+        this.setState({imgViz: isVisible})
+      }} >
+        <img
+          src={this.props.src}
+          style={{
+            width: 300,
+            height: 300,
+            opacity: this.state.imgViz ? 1 : 0.25,
+            transition: 'opacity 500ms linear'
+          }}
+     />
+      </VizSensor>
         </Row>
+        
       </Container>
   );
 }

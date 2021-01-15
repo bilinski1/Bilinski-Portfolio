@@ -30,7 +30,7 @@ class About extends Component {
       <Row>
       <Col style={{margin: 'auto', textAlign: 'center'}}>
       <h2 className='pt-4 maintext'> FULL-STACK DEVELOPMENT </h2>
-      <h3 className='py-1 mainsubtext'> HTML/CSS/REACT/JQUERY/NODE JS/BOOTSTRAP/RESPONSIVE</h3>
+      <h3 className='py-1 mainsubtext'> HTML/CSS/Java Script/REACT/JQUERY/NODE JS/BOOTSTRAP/RESPONSIVE</h3>
       </Col>
       </Row>
     </Container>
