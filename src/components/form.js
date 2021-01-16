@@ -19,7 +19,7 @@ class Form extends Component {
         e.preventDefault();
         axios({
           method: "POST", 
-          url:"http://bdesign.dev:3002/send", 
+          url:"https://bdesign.dev:3002/send", 
           data:  this.state
         }).then((response)=>{
           if (response.data.status === 'success') {
