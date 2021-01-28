@@ -1,0 +1,22 @@
+a:link {
+    color: white;
+}
+  
+a:visited {
+    color: white; 
+ }
+  
+a:hover {                  
+    cursor: pointer;
+    color: rgb(68, 67, 67) !important; 
+    text-decoration: none !important; 
+}
+  
+a:active {
+    color: grey;
+}
+
+
+
+
+  

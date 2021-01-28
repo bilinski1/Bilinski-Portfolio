@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Layout, Header, Navigation, Content, Drawer } from 'react-mdl';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Layout, Header, Navigation, Content, Drawer } from 'react-mdl';
 import styles from './App.css';
 import Routes from './components/routes';
 import { Link } from 'react-router-dom';
 import Footerino from './components/footer';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, Box, TextField, Paper } from '@material-ui/core';
+import { Grid, Box, TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
-import { Col, Row } from 'react-bootstrap';
 
 
 class Form extends Component {
@@ -25,7 +24,6 @@ class Form extends Component {
         }).then((response)=>{
           if (response.data.status === 'success') {
             alert("Message Sent."); 
-            this.resetForm()
           } else if (response.data.status === 'fail') {
             alert("Message failed to send.")
           }
@@ -33,33 +31,8 @@ class Form extends Component {
       }
 
     render (){
-      var paper = {
-        marginTop: "20px",
-        maxWidth: "450px",
-        textAlign: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#767676",
-        color: "dark-grey"
-
-      }
-
-      var text = {
-        color: "#333333"
-
-        
-      }
         return (
-            <Grid container fluid direction="column" justify="flex-center" alignItems="center" spacing={0} alignContent="center" className='Form'>
-              <Row>
-              <Col fluid>
-              <Paper elevation={1} style={paper}>
-              <h1 style={text}>tel: +48 669 560 101 <br></br> email: office@bdesign.dev <br></br>
-              Dębno 416<br></br>32-852 Dębno</h1>
-
-              </Paper>
-              </Col>
-              <Col fluid>
+            <Grid container fluid direction="column" justify="flex-center" alignItems="center" spacing={3} alignContent="center" className='Form'>
               <form style={{ textAlign: 'center'}} noValidate autoComplete="off" alignItems="center" spacing={3} alignContent="center" id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
               <Box m={2}>
               <TextField id="filled-secondary" label="Imię" variant="filled" value={this.state.firstname} onChange={this.onFirstNameChange.bind(this)} />
@@ -75,8 +48,9 @@ class Form extends Component {
               </Box>
               <Button type="submit" variant="outlined" color="primary">Send</Button>
               </form>
-              </Col>
-              </Row>
+              <p>email: office@bdesign.dev
+              Adres: Kraków ul. Zamoyskiego 77/2</p>
+              
             </Grid>
         );
     }

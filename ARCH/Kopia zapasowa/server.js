@@ -4,6 +4,14 @@ var nodemailer = require('nodemailer');
 var cors = require('cors');
 const creds = require('./config');
 
+
+const app = express()
+app.use(cors())
+app.use(express.json())
+app.use('/', router)
+app.listen(3002)
+
+
 var transport = {
     host: 'mail.privateemail.com', // Don’t forget to replace with the SMTP host of your provider
     port: 587,
@@ -31,7 +39,7 @@ transporter.sendMail({
   to: "bilinski.mateusz@gmail.com",
   subject: "subject",
   text: "contact.message"
-}, function(error, info){np
+}, function(error, info){
     if(error){
         console.log(error);
     }else{
@@ -66,8 +74,4 @@ router.post('/send', (req, res, next) => {
   })
 })
 
-const app = express();
-app.use(cors())
-app.use(express.json())
-app.use('/', router)
-app.listen(3002)
+
