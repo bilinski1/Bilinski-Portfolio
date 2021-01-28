@@ -25,7 +25,6 @@ class Form extends Component {
         }).then((response)=>{
           if (response.data.status === 'success') {
             alert("Message Sent."); 
-            this.resetForm()
           } else if (response.data.status === 'fail') {
             alert("Message failed to send.")
           }
