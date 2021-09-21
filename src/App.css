@@ -8,7 +8,7 @@
   justify-content: center;
 }
 .background {
-  background: #828282;
+  background-image: url("images/background/cool-background.png");
 }
 .portfoliogrid {
   background: #828282;
@@ -16,10 +16,10 @@
 .main {
   min-height: '9000px';
   position: 'relative';
-  background-color: '#828282';
+
 }
 .mainsubtext {
-  color: #666666;
+  color: #ffffff;
 }
 .shadow {
   border: 1px solid;
@@ -34,8 +34,21 @@
 
 .font {
   font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
 }
 
 .gridwidth {
-  width: 600px;
+  width: 1000px;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.carousel-wrapper {
+  margin: auto;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
 }
